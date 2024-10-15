@@ -1,0 +1,751 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard-editor</title>
+    <script type="module" src="../../components.js"></script>
+    <link rel="stylesheet" href="./page-styles.css">
+    <style>
+        /** playground page styles */
+        .playground-page__breadcrumbs {
+            flex: 0 0 auto;
+            margin-bottom: 16px;
+        }
+
+        .playground-page__layout {
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="svb-workspace playground-page checkerboard-editor-page">
+        <div class="svb-breadcrumbs playground-page__breadcrumbs">
+            <nav class="svb-breadcrumbs__list">
+                <a href="#" class="svb-breadcrumbs__item"><i class="svbi-logo-QS-icon"></i></a>
+                <a href="#" class="svb-breadcrumbs__item">Документы</a>
+                <span class="svb-breadcrumbs__item">Акт выполненых работ</span>
+            </nav>
+        </div>
+        <div id="mainLayout" class="main-layout playground-page__layout">
+            <div class="main-layout__sidebar" style="width: 400px;">
+                
+                <div class="checkerboard-editor-page__catalog-selector catalog-selector">
+                    <div class="catalog-selector__title svb-titlebar">
+                        <span class="svb-titlebar__title">Проект</span>
+                        <div class="svb-titlebar__controll">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">
+                                        Добавить <i class="svbi-add"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-selector__body">
+                        <ul class="catalog-selector__list">
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item 
+                                catalog-selector-item--active">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 1</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 2</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 3</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 4</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 5</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>ЖК 6</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="checkerboard-editor-page__catalog-selector catalog-selector">
+                    <div class="catalog-selector__title svb-titlebar">
+                        <span class="svb-titlebar__title">Строение</span>
+                        <div class="svb-titlebar__controll">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">
+                                        Добавить <i class="svbi-add"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-selector__body">
+                        <ul class="catalog-selector__list">
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item 
+                                catalog-selector-item--active">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 1</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 2</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 3</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 4</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 5</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Блок 6</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="checkerboard-editor-page__catalog-selector catalog-selector">
+                    <div class="catalog-selector__title svb-titlebar">
+                        <span class="svb-titlebar__title">Блок</span>
+                        <div class="svb-titlebar__controll">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--cancel">
+                                        Ред. планировок <i class="svbi-floor-plan"></i>
+                                    </button>
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">
+                                        Добавить <i class="svbi-add"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-selector__body">
+                        <ul class="catalog-selector__list">
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item 
+                                catalog-selector-item--active">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 1</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 2</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 3</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 4</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 5</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="
+                                catalog-selector__item 
+                                catalog-selector-item">
+                                <div class="catalog-selector-item__title">
+                                    <span>Подъезд 6</span>
+                                </div>
+                                <div class="catalog-selector-item__actions">
+                                    <button class="catalog-selector-item__btn" style="color: red;">
+                                        <i class="svbi-delete-1"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-content_copy"></i>
+                                    </button>
+                                    <button class="catalog-selector-item__btn">
+                                        <i class="svbi-paint-brush"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-layout__sidebar-sizer"></div>
+            </div>
+
+            <div class="main-layout__content">
+                <div class="main-layout__card">
+                    <div class="checkerboard-editor-page__toolbar svb-toolbar">
+                        <div class="svb-toolbar__zone">
+                            <button class="svb-btn svb-btn--size-s svb-btn--primary">Сохранить блок</button>
+                            <button class="svb-btn svb-btn--size-s svb-btn--cancel">Обновить</button>
+                            <button class="svb-btn svb-btn--size-s svb-btn--cancel">Авто.нумерация</button>
+                            <button class="svb-btn svb-btn--size-s svb-btn--cancel">Отзеркалить</button>
+                            <button class="svb-btn svb-btn--size-s svb-btn--cancel">Массовое редактирование</button>
+                        </div>
+                        <div class="
+                            svb-toolbar__zone 
+                            svb-toolbar__zone--full 
+                            svb-toolbar__zone--align-center">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-layout__card">
+                    <div id="" class="main-checkerboard " data-column-count="4" data-row-count="6">
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--top">
+                           <button id="" class="main-checkerboard__add-button btn btn--primary">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                           </button>
+                           <div id="" class="main-checkerboard__dropdown" style="">
+                              <div id="" class="controll-list">
+                                 <span class="controll-list__item controll-list__add-column">Добавить столбец</span>    
+                                 <span class="controll-list__item controll-list__add-row">Добавить строку</span>    
+                              </div>
+                           </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--top" data-col-index="1" data-row-index="0">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="1" data-row-index="0">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="1" data-row-index="0">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="1" data-row-index="0">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--top" data-col-index="2" data-row-index="0">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="2" data-row-index="0">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="2" data-row-index="0">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="2" data-row-index="0">
+                           </div>
+                           <div class="checkerboard-header__caption">2</div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--top" data-col-index="3" data-row-index="0">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="3" data-row-index="0">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="3" data-row-index="0">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="3" data-row-index="0">
+                           </div>
+                           <div class="checkerboard-header__caption">3</div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--top" data-col-index="4" data-row-index="0">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="4" data-row-index="0">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="4" data-row-index="0">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="4" data-row-index="0">
+                           </div>
+                           <div class="checkerboard-header__caption">4</div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="1">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="1">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="1">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="1">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="2">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="2">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="2">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="2">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="3">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="3">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="3">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="3">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="4">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="4">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="4">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="4">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="5">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="5">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="5">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="5">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__header checkerboard-header checkerboard-header--left" data-col-index="0" data-row-index="1">
+                           <div class="checkerboard-header__controll">
+                              <button class="checkerboard-header__remove-btn" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-delete-1"></i>
+                              </button>
+                              <span class="checkerboard-header__drag-elem" data-col-index="0" data-row-index="1">
+                                 <i class="svbi-drag-drop-vertical"></i>
+                              </span>
+                              <input class="checkerboard-header__select" type="checkbox" data-col-index="0" data-row-index="1">
+                           </div>
+                           <div class="checkerboard-header__caption">1</div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="1" data-row-index="6">Первая квартира 50 мать его квадратов</div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="2" data-row-index="6">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="3" data-row-index="6">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                        <div id="" class="main-checkerboard__cell checkerboard-cell" data-col-index="4" data-row-index="6">
+                            <div class="create-flat">
+                                <button class="svb-btn svb-btn--primary">Добавить <i class="svbi-add"></i></button>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="main-layout__sidebar main-layout__sidebar--right" style="width: 400px;">
+
+                <div class="checkerboard-editor-page__plans-editor plans-editor">
+                    <div class="plans-editor__title svb-titlebar">
+                        <span class="svb-titlebar__title">Планировки</span>
+                        <div class="svb-titlebar__controll">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">
+                                        Добавить <i class="svbi-add"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plans-editor__loader svb-fileuploader">
+                        <div class="svb-fileuploader__selector uploader-selector">
+                            <div class="uploader-selector__title">
+                                Перетащите файлы сюда или нажмите на кнопку</div>
+                            <div class="uploader-selector__note">
+                                Поддерживаемые форматы: PNG, TIFF, JPG
+                            </div>
+                            <button class="svb-btn svb-btn--cancel uploader-selector__button">
+                                <i class="svbi-document-attachment"></i>
+                                Загрузить файл
+                            </button>
+                            <input class="svb-fileuploader__file" type="file" hidden>
+                        </div>
+                        <div class="svb-fileuploader__list uploader-list">
+                            <div class="uploader-list__item">
+                                <input class="uploader-list__check" type="checkbox">
+                                <img class="uploader-list__image" src="/plan-image.jpg">
+                            </div>
+                            <div class="uploader-list__item">
+                                <input class="uploader-list__check" type="checkbox">
+                                <img class="uploader-list__image" src="/plan-image.jpg">
+                            </div>
+                            <div class="uploader-list__item">
+                                <input class="uploader-list__check" type="checkbox">
+                                <span class="uploader-list__preview">
+                                    <i class="svbi-1c"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="svb-btn svb-btn--size-s svb-btn--primary plans-editor__connect-btn">Связать планировку</button>
+                </div>
+
+                <div class="main-layout__sidebar-sizer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

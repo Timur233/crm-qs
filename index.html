@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шахматка с CSS Grid</title>
+    <style>
+
+        .header,
+        .item {
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9e9e9;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .header {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .header-top {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .header-left {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="padding: 20px; display: none">
+      <div class="main-checkerboard" data-column-count="3" data-row-count="4">
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--top">
+            <button class="main-checkerboard__add-button btn btn--primary">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+        </div>
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--top" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">Этаж 2</div>
+        </div>
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--top" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">Этаж 2</div>
+        </div>
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--top" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">Этаж 2</div>
+        </div>
+    
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--left" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">1</div>
+        </div>
+        <div class="main-checkerboard__cell checkerboard-cell">50м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">55м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">60м²</div>
+    
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--left" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">2</div>
+        </div>
+        <div class="main-checkerboard__cell checkerboard-cell">45м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">50м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">55м²</div>
+    
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--left" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">3</div>
+        </div>
+        <div class="main-checkerboard__cell checkerboard-cell">45м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">50м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">55м²</div>
+    
+        <div class="main-checkerboard__header checkerboard-header checkerboard-header--left" draggable="true">
+            <div class="checkerboard-header__controll">
+                <button class="checkerboard-header__remove-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 3.66797L12.5869 10.3514C12.4813 12.0589 12.4285 12.9127 12.0005 13.5266C11.7889 13.83 11.5165 14.0862 11.2005 14.2786C10.5614 14.668 9.706 14.668 7.99513 14.668C6.28208 14.668 5.42553 14.668 4.78603 14.2779C4.46987 14.0851 4.19733 13.8285 3.98579 13.5245C3.55792 12.9097 3.5063 12.0547 3.40307 10.3448L3 3.66797" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M2 3.66536H14M10.7038 3.66536L10.2487 2.72652C9.9464 2.10287 9.7952 1.79104 9.53447 1.59657C9.47667 1.55343 9.4154 1.51506 9.35133 1.48183C9.0626 1.33203 8.71607 1.33203 8.023 1.33203C7.31253 1.33203 6.95733 1.33203 6.66379 1.48811C6.59873 1.5227 6.53665 1.56263 6.47819 1.60748C6.21443 1.80983 6.06709 2.13306 5.77241 2.77954L5.36861 3.66536" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M6.3335 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                        <path d="M9.66699 11V7" stroke="#FD4E5D" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <span class="checkerboard-header__drag-elem">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.99935C5 3.53911 5.3731 3.16602 5.83333 3.16602H5.83757C6.2978 3.16602 6.6709 3.53911 6.6709 3.99935C6.6709 4.45959 6.2978 4.83268 5.83757 4.83268H5.83333C5.3731 4.83268 5 4.45959 5 3.99935ZM10.3291 3.99935C10.3291 3.53911 10.7022 3.16602 11.1625 3.16602H11.1667C11.6269 3.16602 12 3.53911 12 3.99935C12 4.45959 11.6269 4.83268 11.1667 4.83268H11.1625C10.7022 4.83268 10.3291 4.45959 10.3291 3.99935ZM5 7.99935C5 7.53911 5.3731 7.16602 5.83333 7.16602H5.83757C6.2978 7.16602 6.6709 7.53911 6.6709 7.99935C6.6709 8.45959 6.2978 8.83268 5.83757 8.83268H5.83333C5.3731 8.83268 5 8.45959 5 7.99935ZM10.3291 7.99935C10.3291 7.53911 10.7022 7.16602 11.1625 7.16602H11.1667C11.6269 7.16602 12 7.53911 12 7.99935C12 8.45959 11.6269 8.83268 11.1667 8.83268H11.1625C10.7022 8.83268 10.3291 8.45959 10.3291 7.99935ZM5 11.9993C5 11.5391 5.3731 11.166 5.83333 11.166H5.83757C6.2978 11.166 6.6709 11.5391 6.6709 11.9993C6.6709 12.4596 6.2978 12.8327 5.83757 12.8327H5.83333C5.3731 12.8327 5 12.4596 5 11.9993ZM10.3291 11.9993C10.3291 11.5391 10.7022 11.166 11.1625 11.166H11.1667C11.6269 11.166 12 11.5391 12 11.9993C12 12.4596 11.6269 12.8327 11.1667 12.8327H11.1625C10.7022 12.8327 10.3291 12.4596 10.3291 11.9993Z" fill="#6B7A80"/>
+                    </svg>
+                </span>
+                <input class="checkerboard-header__select" type="checkbox">
+            </div>
+            <div class="checkerboard-header__caption">4</div>
+        </div>
+        <div class="main-checkerboard__cell checkerboard-cell">45м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">50м²</div>
+        <div class="main-checkerboard__cell checkerboard-cell">55м²</div>
+      </div>
+    </div>
+
+    <div class="render-app" style="padding: 20px;">
+
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script>
+      const headersTop = document.querySelectorAll('.header-top');
+const headersLeft = document.querySelectorAll('.header-left');
+let draggedElement = null;
+
+// Функция для отслеживания начала перетаскивания
+headersTop.forEach(header => {
+    header.addEventListener('dragstart', (e) => {
+        draggedElement = e.target;
+        e.dataTransfer.setData('text/plain', '');
+    });
+});
+
+// Функция для вставки заголовка после того, как его отпустили
+headersTop.forEach(header => {
+    header.addEventListener('dragover', (e) => {
+        e.preventDefault();
+    });
+
+    header.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (draggedElement !== e.target) {
+            e.target.parentNode.insertBefore(draggedElement, e.target);
+            // Нужно обновить порядок ячеек в сетке, если меняем колонки
+            updateGridOrder();
+        }
+    });
+});
+
+// Обновление порядка колонок или строк в сетке (пример для колонок)
+function updateGridOrder() {
+    const headersArray = Array.from(document.querySelectorAll('.header-top'));
+    headersArray.forEach((header, index) => {
+        header.style.gridColumn = index + 2; // +2 для смещения первого заголовка
+        // Аналогично обновляем данные в столбцах
+        const columnItems = document.querySelectorAll(`.item:nth-child(${index + 2})`);
+        columnItems.forEach(item => {
+            item.style.gridColumn = index + 2;
+        });
+    });
+}
+</script>
+  </body>
+</html>

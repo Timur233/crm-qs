@@ -1,0 +1,20 @@
+.checkerboard-editor-page__catalog-selector {
+    border-bottom: 1px solid #D1D5DB;
+    margin-bottom: 12px;
+}
+
+.plans-editor__title {
+    margin-bottom: 12px;
+}
+
+.plans-editor__loader {
+    margin-bottom: 12px;
+}
+
+.plans-editor__connect-btn {
+    width: 100%;
+}
+
+/* .checkerboard-editor-page__toolbar {
+    margin-bottom: 16px;
+} */

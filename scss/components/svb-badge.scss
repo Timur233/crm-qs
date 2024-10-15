@@ -1,0 +1,90 @@
+@import "../svb-vars.scss";
+
+.svb-badge {
+    --accent-color:rgba(151, 178, 196, 1);
+    --size-height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    height: var(--size-height);
+    
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    color: rgba(0, 32, 51, 0.6);
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    background-color: #DEE4E8;
+    border: 1px solid #DEE4E8;
+    border-radius: 4px;
+
+    &--success {
+        --accent-color:rgba(36, 195, 142, 1);
+        background-color: rgba(36, 195, 142, 1);
+        border-color: rgba(36, 195, 142, 1);
+        color: #fff;
+    }
+
+    &--alert {
+        --accent-color:rgba(255, 68, 67, 1);
+        background-color: rgba(255, 68, 67, 1);
+        border-color: rgba(255, 68, 67, 1);
+        color: #fff;
+    }
+
+    &--warning {
+        --accent-color:rgba(243, 139, 1, 1);
+        background-color: rgba(243, 139, 1, 1);
+        border-color: rgba(243, 139, 1, 1);
+        color: #fff;
+    }
+
+    &--normal {
+        --accent-color:rgba(11, 165, 255, 1);
+        background-color: rgba(11, 165, 255, 1);
+        border-color: rgba(11, 165, 255, 1);
+        color: #fff;
+    }
+
+    &--round {
+        border-radius: 24px;
+    }
+
+    &--outline {
+        background: none;
+        color: var(--accent-color);
+    }
+
+    &--circle {
+        width: var(--size-height);
+        height: var(--size-height);
+        border-radius: 100%;
+        padding: 0 !important; 
+    }
+
+    &--size-s {
+        --size-height: 21px;
+
+        font-size: 11px;
+        line-height: 1.33;
+    }
+
+    &--size-xs {
+        --size-height: 16px;
+        
+        padding: 2px 8px;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 1.33;
+    }
+}

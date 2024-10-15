@@ -1,0 +1,25 @@
+.svb-toolbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    &__zone {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 auto;
+        gap: 4px;
+
+        &--align-center {
+            justify-content: center;
+        }
+
+        &--full {
+            flex: 1 1 auto;
+        }
+
+        &--right {
+            margin-left: auto;
+        }
+    }
+}

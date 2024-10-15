@@ -1,0 +1,63 @@
+@import "../svb-vars.scss";
+
+.svb-breadcrumbs {
+    font-size: 16px;
+    line-height: 1.4;
+    color: $text-color-muted;
+
+    &--size-l {
+        font-size: 18px;
+    }
+
+    &--size-s {
+        font-size: 14px;
+    }
+
+    &--size-xs {
+        font-size: 12px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__item {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: none;
+        padding: 8px 0;
+        transition: color .18s;
+
+        &:not(:last-child) {
+            &:hover {
+                color: $primary-color;
+            }
+
+            &::after {
+                content: "\e90e";
+                font-family: 'svbi' !important;
+                speak: never;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                color: #9CA3AF;
+                font-size: inherit;
+                margin-left: 16px;
+            
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        &:last-child {
+            color: #000;
+        }
+    }
+}

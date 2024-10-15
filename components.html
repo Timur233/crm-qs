@@ -1,0 +1,885 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./components.js"></script>
+</head>
+<body>
+    <div class="playground-page svb-workspace">
+        <div class="container">
+            <div class="playground-page__title">Компоненты:</div>
+
+            <!-- buttons -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Buttons size L
+                        </div>
+                        <div class="component__example">
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                                <button class="svb-btn svb-btn--size-l">Default button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--outline">Outline button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--primary">Primary button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--error">Error button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--cancel">Cancel button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--white">White button</button>
+                                <button class="svb-btn svb-btn--size-l svb-btn--white">Width icon <i class="svbi-location"></i></button>
+                                <button class="svb-btn svb-btn--icon svb-btn--size-l svb-btn--primary">
+                                    <i class="svbi-add"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Buttons size M (default size)
+                        </div>
+                        <div class="component__example">
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                                <button class="svb-btn">Default button</button>
+                                <button class="svb-btn svb-btn--outline">Outline button</button>
+                                <button class="svb-btn svb-btn--primary">Primary button</button>
+                                <button class="svb-btn svb-btn--error">Error button</button>
+                                <button class="svb-btn svb-btn--cancel">Cancel button</button>
+                                <button class="svb-btn svb-btn--white">White button</button>
+                                <button class="svb-btn svb-btn--white">Width icon <i class="svbi-location"></i></button>
+                                <button class="svb-btn svb-btn--icon svb-btn--primary">
+                                    <i class="svbi-add"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Buttons size S
+                        </div>
+                        <div class="component__example">
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                                <button class="svb-btn svb-btn--size-s">Default button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--outline">Outline button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--primary">Primary button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--error">Error button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--cancel">Cancel button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--white">White button</button>
+                                <button class="svb-btn svb-btn--size-s svb-btn--white">Width icon <i class="svbi-location"></i></button>
+                                <button class="svb-btn svb-btn--icon svb-btn--size-s svb-btn--primary">
+                                    <i class="svbi-add"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Buttons size XS
+                        </div>
+                        <div class="component__example">
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                                <button class="svb-btn svb-btn--size-xs">Default button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--outline">Outline button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--primary">Primary button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--error">Error button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--cancel">Cancel button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--white">White button</button>
+                                <button class="svb-btn svb-btn--size-xs svb-btn--white">Width icon <i class="svbi-location"></i></button>
+                                <button class="svb-btn svb-btn--icon svb-btn--size-xs svb-btn--primary">
+                                    <i class="svbi-add"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- toolbar -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Tool bar
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">Открыть</button>
+                                </div>
+                                <div class="svb-toolbar__zone svb-toolbar__zone--right">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--error">Удалить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Tool bar
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-toolbar">
+                                <div class="svb-toolbar__zone">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--primary">Открыть</button>
+                                </div>
+                                <div class="
+                                    svb-toolbar__zone 
+                                    svb-toolbar__zone--full 
+                                    svb-toolbar__zone--align-center">
+                                    <button class="svb-btn svb-btn--size-s svb-btn--error">Удалить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- title bar -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Title bar size L
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-titlebar svb-titlebar--size-l">
+                                <span class="svb-titlebar__title">Проект</span>
+                                <div class="svb-titlebar__controll">
+                                    <div class="svb-toolbar">
+                                        <div class="svb-toolbar__zone">
+                                            <button class="svb-btn svb-btn--primary">
+                                                <i class="svbi-add"></i>
+                                            </button>
+                                            <button class="svb-btn svb-btn--error">
+                                                <i class="svbi-delete-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Title bar
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-titlebar">
+                                <span class="svb-titlebar__title">Проект</span>
+                                <div class="svb-titlebar__controll">
+                                    <div class="svb-toolbar">
+                                        <div class="svb-toolbar__zone">
+                                            <button class="svb-btn svb-btn--primary">
+                                                <i class="svbi-add"></i>
+                                            </button>
+                                            <button class="svb-btn svb-btn--error">
+                                                <i class="svbi-delete-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- breadcrumbs -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Breadcrumbs size L
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-breadcrumbs svb-breadcrumbs--size-l">
+                                <nav class="svb-breadcrumbs__list">
+                                    <a href="#" class="svb-breadcrumbs__item"><i class="svbi-logo-QS-icon"></i></a>
+                                    <a href="#" class="svb-breadcrumbs__item">Документы</a>
+                                    <span class="svb-breadcrumbs__item">Акт выполненых работ</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Breadcrumbs size M (default)
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-breadcrumbs">
+                                <nav class="svb-breadcrumbs__list">
+                                    <a href="#" class="svb-breadcrumbs__item"><i class="svbi-logo-QS-icon"></i></a>
+                                    <a href="#" class="svb-breadcrumbs__item">Документы</a>
+                                    <span class="svb-breadcrumbs__item">Акт выполненых работ</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Breadcrumbs size S
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-breadcrumbs svb-breadcrumbs--size-s">
+                                <nav class="svb-breadcrumbs__list">
+                                    <a href="#" class="svb-breadcrumbs__item"><i class="svbi-logo-QS-icon"></i></a>
+                                    <a href="#" class="svb-breadcrumbs__item">Документы</a>
+                                    <span class="svb-breadcrumbs__item">Акт выполненых работ</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Breadcrumbs size XS
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-breadcrumbs svb-breadcrumbs--size-xs">
+                                <nav class="svb-breadcrumbs__list">
+                                    <a href="#" class="svb-breadcrumbs__item"><i class="svbi-logo-QS-icon"></i></a>
+                                    <a href="#" class="svb-breadcrumbs__item">Документы</a>
+                                    <span class="svb-breadcrumbs__item">Акт выполненых работ</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- file uploader -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            File uploader
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-fileuploader">
+                                <div class="svb-fileuploader__selector uploader-selector">
+                                    <div class="uploader-selector__title">
+                                        Перетащите файлы сюда или нажмите на кнопку</div>
+                                    <div class="uploader-selector__note">
+                                        Поддерживаемые форматы: PNG, TIFF, JPG
+                                    </div>
+                                    <button class="svb-btn svb-btn--cancel uploader-selector__button">
+                                        <i class="svbi-document-attachment"></i>
+                                        Загрузить файл
+                                    </button>
+                                    <input class="svb-fileuploader__file" type="file" hidden>
+                                </div>
+                                <div class="svb-fileuploader__list uploader-list">
+                                    <div class="uploader-list__item">
+                                        <input class="uploader-list__check" type="checkbox">
+                                        <img class="uploader-list__image" src="./plan-image.jpg">
+                                    </div>
+                                    <div class="uploader-list__item">
+                                        <input class="uploader-list__check" type="checkbox">
+                                        <img class="uploader-list__image" src="./plan-image.jpg">
+                                    </div>
+                                    <div class="uploader-list__item">
+                                        <input class="uploader-list__check" type="checkbox">
+                                        <span class="uploader-list__preview">
+                                            <i class="svbi-1c"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- badge -->
+            <div class="row">
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge Outline
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--outline svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--outline svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- badge -->
+            <div class="row">
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge size S
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-s svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-s svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge Outline
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-s svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- badge -->
+            <div class="row">
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge size XS
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-xs svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-xs svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Badge Outline
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--success">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--alert">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--warning">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--normal">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline">
+                                <i class="svbi-logo-QS-icon"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                        <div class="component__example" style="
+                            display:flex;
+                            flex-wrap: wrap;
+                            gap: 4px
+                        ">
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--round svb-badge--success">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--round svb-badge--alert">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--round svb-badge--warning">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--round svb-badge--normal">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--round">
+                                <i class="svbi-delete-1"></i>
+                                СОГЛАСОВАТЬ
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--success svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--alert svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--warning svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--normal svb-badge--circle">
+                                22
+                            </div>
+                            <div class="svb-badge svb-badge--size-xs svb-badge--outline svb-badge--circle">
+                                22
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- tabs-switcher -->
+            <div class="row">
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Tab switcher
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-tab-switcher">
+                                <button class="tab-switcher-btn tab-switcher-btn--active">Открыть</button>
+                                <button class="tab-switcher-btn">Закрыть</button>
+                                <button class="tab-switcher-btn">Послать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-6">
+                    <div class="component__wrapper">
+                        <div class="component__title">
+                            Tab switcher size s
+                        </div>
+                        <div class="component__example">
+                            <div class="svb-tab-switcher svb-tab-switcher--size-s">
+                                <button class="tab-switcher-btn">Открыть</button>
+                                <button class="tab-switcher-btn tab-switcher-btn--active">Закрыть</button>
+                                <button class="tab-switcher-btn">Послать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

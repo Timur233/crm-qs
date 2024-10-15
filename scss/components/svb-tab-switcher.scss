@@ -1,0 +1,55 @@
+@import "../svb-vars.scss";
+
+$background-color: #fff;
+$boder-color: rgba(209, 213, 219, 1);
+
+.svb-tab-switcher {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 4px;
+    border: 1px solid $boder-color;
+    background-color: $background-color;
+    border-radius: 4px;
+
+    &--size-s {
+        padding: 2px;
+
+        & .tab-switcher-btn {
+            @extend .svb-btn--size-xs;
+
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}
+
+.tab-switcher-btn {
+    @extend .svb-btn;
+    @extend .svb-btn--size-s;
+
+    position: relative;
+    overflow: visible;
+
+    &:not(:first-child)::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        left: -1px;
+        top: 4px;
+        bottom: 4px;
+        background: $boder-color;
+    }
+
+    &--active {
+        @extend .svb-btn--primary;
+        
+        &::before {
+            display: none;
+        }
+
+        & + .tab-switcher-btn:before {
+            display: none;
+        }
+    }
+}

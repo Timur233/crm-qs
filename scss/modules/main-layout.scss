@@ -1,0 +1,100 @@
+@import "../svb-vars.scss";
+
+$gap: 16px;
+$padding: 20px;
+$border-radius: 4px;
+$bg: #fff;
+$border-color: #D1D5DB;
+
+@mixin card-settings() {
+    position: relative;
+    background-color: $bg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+.main-layout {
+    display: grid; 
+    grid-template-columns: min-content 1fr min-content; 
+    grid-template-rows: min-content 1fr min-content; 
+    grid-template-areas: 
+        "left-sidebar header right-sidebar"
+        "left-sidebar content right-sidebar"
+        "left-sidebar footer right-sidebar";
+    overflow: auto;
+
+    &--type-1 {
+        grid-template-areas: 
+            "header header header"
+            "left-sidebar content right-sidebar"
+            "footer footer footer";
+    }
+        
+    &__sidebar {
+        @include card-settings();
+
+        grid-area: left-sidebar;
+        margin-right: $gap;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+
+        &--right {
+            grid-area: right-sidebar;
+            margin-left: $gap;
+            margin-right: auto;
+
+            & > .main-layout__sidebar-sizer {
+                right: auto;
+                left: -1px;
+            }
+        }
+    }
+
+    &__sidebar-sizer {
+        position: absolute;
+        width: 3px;
+        top: 0;
+        bottom: 0;
+        right: -1px;
+        cursor: ew-resize;
+    }
+
+    &__content {
+        grid-area: content;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        gap: $gap
+    }
+
+    &__card {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: auto;
+
+        @include card-settings();
+    }
+
+    &__header {
+        @include card-settings();
+        
+        grid-area: header;
+        margin-bottom: $gap;
+    }
+
+    &__footer {
+        @include card-settings();
+        
+        grid-area: footer;
+        margin-top: $gap;
+    }
+}

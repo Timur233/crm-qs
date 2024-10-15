@@ -1,0 +1,76 @@
+@import "./font.scss";
+@import "./svb-vars.scss";
+
+body {
+    margin: 0;
+}
+
+.svb-workspace {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #F3F4F6;
+
+    @import "./reset.scss";
+    @import "./default.scss";
+    @import "./dev-wrapper.scss";
+    @import "./svb-gridsystem.scss";
+    @import "./components/forms.scss";
+    @import "./components/inputs.scss";
+    @import "./components/select.scss";
+    @import "./components/buttons.scss";
+    @import "./components/file-uploader.scss";
+    @import "./components/page-alert.scss";
+    @import "./components/datepicker.scss";
+    @import "./components/wheel-picker.scss";
+    @import "./components/modal.scss";
+    @import "./modules/main-checkerboard.scss";
+
+    @import "./components/base-elements.scss";
+    @import "./components/svb-button.scss";
+    @import "./components/svb-toolbar.scss";
+    @import "./components/svb-titlebar.scss";
+    @import "./components/svb-breadcrumbs.scss";
+    @import "./components/svb-fileuploader.scss";
+    @import "./components/svb-badge.scss";
+    @import "./components/svb-tab-switcher.scss";
+
+    //modules 
+    @import "./modules/main-layout.scss";
+    @import "./modules/catalog-selector.scss";
+    @import "./modules/news-bar.scss";
+    @import "./modules/menu-bar.scss";
+    @import "./modules/leader-board.scss";
+
+    input, select, textarea {
+        border: 1px solid #D1D5DB;
+        border-radius: 8px;
+        padding: 16px;
+        font-size: 14px;
+        line-height: 1.143;
+        font-family: inherit;
+        outline: none !important;
+        transition: border-color .20s;
+    }
+
+    input:active, select:active, textarea:active,
+    input:focus, select:focus, textarea:focus {
+        border-color: #00a0e3;
+    }
+
+    textarea::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    textarea::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    textarea::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

@@ -1,0 +1,382 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OP Manager Desctop</title>
+    <script type="module" src="../../../components.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /** playground page styles */
+        .playground-page__breadcrumbs {
+            flex: 0 0 auto;
+            margin-bottom: 16px;
+        }
+
+        .playground-page__layout {
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="svb-workspace playground-page op-manager-desctop">
+        <div id="mainLayout" class="main-layout">
+            <div class="main-layout__content"> <!--sdfsdfdsfdfsdfdsfdsf-->
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="main-layout__card">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="menu-bar">
+                                                <div class="menu-bar__title svb-titlebar svb-titlebar--size-l">
+                                                    <span class="svb-titlebar__title">Основное</span>
+                                                </div>
+                                                <div class="menu-bar__body">
+                                                    <ul class="menu-bar__list">
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Служебная записка</span>
+                                                            </a>
+                                                            <div class="svb-badge svb-badge--size-s svb-badge--success svb-badge--circle">
+                                                                5
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Докладная</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Запрос</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Заявки на закуп</span>
+                                                            </a>
+                                                            <div class="svb-badge svb-badge--size-s svb-badge--warning svb-badge--circle">
+                                                                1
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Заказы поставщикам</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Поступления товаров</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Выдачи субподрядчикам</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Выдачи сотрудникам</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Отправки на другие склады</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Получения с других складов</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Инвентаризации</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="menu-bar">
+                                                <div class="menu-bar__title svb-titlebar svb-titlebar--size-l">
+                                                    <span class="svb-titlebar__title">Спец. раздел</span>
+                                                </div>
+                                                <div class="menu-bar__body">
+                                                    <ul class="menu-bar__list">
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Договоры</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Договоры</span>
+                                                            </a>
+                                                            <div class="svb-badge svb-badge--size-s svb-badge--alert svb-badge--circle">
+                                                                5
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Акции</span>
+                                                            </a>
+                                                            <div class="svb-badge svb-badge--size-s svb-badge--warning svb-badge--circle">
+                                                                1
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Проекты</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Отчеты</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Шахматка</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-bar__item">
+                                                            <a href="#" class="menu-bar__link">
+                                                                <span>Справочники</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="main-layout__card">
+                                    <div class="leader-board">
+                                        <div class="leader-board__title svb-titlebar">
+                                            <span class="svb-titlebar__title">Лидеры</span>
+                                            <div class="svb-titlebar__controll">
+                                                <div class="svb-tab-switcher">
+                                                    <button class="tab-switcher-btn tab-switcher-btn--active">
+                                                        Открыть</button>
+                                                    <button class="tab-switcher-btn">Закрыть</button>
+                                                    <button class="tab-switcher-btn">Послать</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="leader-board__body">
+                                            <table class="leader-board__table leader-board-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Место</th>
+                                                        <th>ФИО</th>
+                                                        <th>План</th>
+                                                        <th>Факт</th>
+                                                        <th>
+                                                            <i class="svbi-add"></i>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Katie Sims</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Daniel Hamilton</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Lorri Warf</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Kathy Pacheco</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Frances Swann</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Judith Rodriguez</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Dennis Callis</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Stephanie Nicol</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>James Hall</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>James Hall</td>
+                                                        <td>150</td>
+                                                        <td>90</td>
+                                                        <td><i class="svbi-add"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="main-layout__card">
+                                    <div class="news-bar">
+                                        <div class="news-bar__title svb-titlebar svb-titlebar--size-l">
+                                            <span class="svb-titlebar__title">Новости и акции</span>
+                                            <div class="svb-titlebar__controll">
+                                                <div class="svb-toolbar">
+                                                    <div class="svb-toolbar__zone">
+                                                        <button class="svb-btn svb-btn--outline">
+                                                            Показать все
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-bar__list">
+                                            <div class="news-bar-item">
+                                                <div class="news-bar-item__body">
+                                                    <div class="news-bar-item__image-block">
+                                                        <img src="/public/Photo.jpg" alt="" class="news-bar-item__image">
+                                                    </div>
+                                                    <div class="news-bar-item__title">
+                                                        <a href="#" class="news-bar-item__link">
+                                                            Qazaq Stroy обеспечит водой более 3000 домов Алматинского микрорайона
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="news-bar-item__meta">
+                                                    <div class="news-bar-item__date">
+                                                        01.01.2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-bar-item">
+                                                <div class="news-bar-item__body">
+                                                    <div class="news-bar-item__image-block">
+                                                        <img src="/public/Photo-1.jpg" alt="" class="news-bar-item__image">
+                                                    </div>
+                                                    <div class="news-bar-item__title">
+                                                        <a href="#" class="news-bar-item__link">
+                                                            Qazaq Stroy обеспечит водой более 3000 домов Алматинского микрорайона
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="news-bar-item__meta">
+                                                    <div class="news-bar-item__date">
+                                                        01.01.2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-bar-item">
+                                                <div class="news-bar-item__body">
+                                                    <div class="news-bar-item__image-block">
+                                                        <img src="/public/Photo-2.jpg" alt="" class="news-bar-item__image">
+                                                    </div>
+                                                    <div class="news-bar-item__title">
+                                                        <a href="#" class="news-bar-item__link">
+                                                            Qazaq Stroy обеспечит водой более 3000 домов Алматинского микрорайона
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="news-bar-item__meta">
+                                                    <div class="news-bar-item__date">
+                                                        01.01.2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-bar-item">
+                                                <div class="news-bar-item__body">
+                                                    <div class="news-bar-item__image-block">
+                                                        <img src="/public/Photo.jpg" alt="" class="news-bar-item__image">
+                                                    </div>
+                                                    <div class="news-bar-item__title">
+                                                        <a href="#" class="news-bar-item__link">
+                                                            Qazaq Stroy обеспечит водой более 3000 домов Алматинского микрорайона
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="news-bar-item__meta">
+                                                    <div class="news-bar-item__date">
+                                                        01.01.2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-bar-item">
+                                                <div class="news-bar-item__body">
+                                                    <div class="news-bar-item__image-block">
+                                                        <img src="/public/Photo-1.jpg" alt="" class="news-bar-item__image">
+                                                    </div>
+                                                    <div class="news-bar-item__title">
+                                                        <a href="#" class="news-bar-item__link">
+                                                            Qazaq Stroy обеспечит водой более 3000 домов Алматинского микрорайона
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="news-bar-item__meta">
+                                                    <div class="news-bar-item__date">
+                                                        01.01.2024
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="main-layout__card">
+                            sidebar
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

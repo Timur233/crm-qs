@@ -1,0 +1,70 @@
+@import "../svb-vars.scss";
+
+.svb-fileuploader {
+    &__selector {
+        margin-bottom: 8px;
+    }
+}
+
+.uploader-selector {
+    padding: 28px;
+    border: 2px dashed #D1D5DB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.6;
+        color: #4B5563;
+        margin-bottom: 4px;
+    }
+
+    &__note {
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.6;
+        color: #9CA3AF;
+    }
+
+    &__button {
+        margin-top: 12px;
+    }
+}
+
+.uploader-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 168px;
+        height: 180px;
+        background-color: #fff;
+
+        box-shadow: 0px 1px 2px 0px #0000000F;
+        box-shadow: 0px 1px 3px 0px #0000001A;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__preview {
+        & > i {
+            font-size: 40px;
+        }
+    }
+
+    &__check {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}

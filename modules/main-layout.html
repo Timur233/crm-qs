@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main layout</title>
+    <script type="module" src="../components.js"></script>
+</head>
+<body class="svb-workspace" style="padding: 20px;">
+    <div id="mainLayout" class="main-layout">
+        <div class="main-layout__header">
+            <div class="svb-toolbar">
+                <button 
+                    class="svb-btn change-btn svb-btn--primary" data-mode="">Стандарт</button>
+                <button 
+                    class="svb-btn change-btn svb-btn--outline" data-mode="type-1">Вариант 1</button>
+            </div>
+        </div>
+        <div class="main-layout__sidebar">
+            left-sidebar
+            <div class="main-layout__sidebar-sizer"></div>
+        </div>
+        <div class="main-layout__content">content</div>
+        <div class="main-layout__sidebar main-layout__sidebar--right">
+            right-sidebar
+            <div class="main-layout__sidebar-sizer"></div>
+        </div>
+        <div class="main-layout__footer">footer</div>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('.change-btn');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(item => {
+                item.classList.remove(`svb-btn--primary`);
+                item.classList.add(`svb-btn--outline`);
+
+                if (item.dataset.mode !== '') {
+                    mainLayout.classList.remove(`main-layout--${item.dataset.mode}`);
+                }
+            });
+
+            btn.classList.remove(`svb-btn--outline`);
+            btn.classList.add(`svb-btn--primary`);
+
+            if (btn.dataset.mode !== '') {
+                mainLayout.classList.add(`main-layout--${btn.dataset.mode}`);
+            }
+        })
+    })
+</script>
+</html>

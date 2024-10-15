@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'svbi';
+    src:  url('./fonts/svbi.eot?je3qtc');
+    src:  url('./fonts/svbi.eot?je3qtc#iefix') format('embedded-opentype'),
+      url('./fonts/svbi.ttf?je3qtc') format('truetype'),
+      url('./fonts/svbi.woff?je3qtc') format('woff'),
+      url('./fonts/svbi.svg?je3qtc#svbi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="svbi-"], [class*=" svbi-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'svbi' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .svbi-1c:before {
+    content: "\e900";
+    color: #d91920;
+  }
+  .svbi-acute:before {
+    content: "\e901";
+  }
+  .svbi-add-square:before {
+    content: "\e902";
+  }
+  .svbi-add:before {
+    content: "\e903";
+  }
+  .svbi-alert-circle:before {
+    content: "\e904";
+  }
+  .svbi-alert:before {
+    content: "\e905";
+  }
+  .svbi-apple:before {
+    content: "\e906";
+  }
+  .svbi-archive:before {
+    content: "\e907";
+  }
+  .svbi-arrow-down-1:before {
+    content: "\e908";
+  }
+  .svbi-arrow-down:before {
+    content: "\e909";
+  }
+  .svbi-arrow-expand:before {
+    content: "\e90a";
+  }
+  .svbi-arrow-left:before {
+    content: "\e90b";
+  }
+  .svbi-arrow-reload-horizontal:before {
+    content: "\e90c";
+  }
+  .svbi-arrow-right-1:before {
+    content: "\e90d";
+  }
+  .svbi-arrow-right:before {
+    content: "\e90e";
+  }
+  .svbi-arrow-shrink:before {
+    content: "\e90f";
+  }
+  .svbi-arrow-up:before {
+    content: "\e910";
+  }
+  .svbi-attachment:before {
+    content: "\e911";
+  }
+  .svbi-baby:before {
+    content: "\e912";
+  }
+  .svbi-border-all:before {
+    content: "\e913";
+  }
+  .svbi-brochure:before {
+    content: "\e914";
+  }
+  .svbi-bubble-chat-1:before {
+    content: "\e915";
+  }
+  .svbi-bubble-chat-notification:before {
+    content: "\e916";
+  }
+  .svbi-bubble-chat:before {
+    content: "\e917";
+  }
+  .svbi-building:before {
+    content: "\e918";
+  }
+  .svbi-calendar:before {
+    content: "\e919";
+  }
+  .svbi-call-incoming:before {
+    content: "\e91a";
+  }
+  .svbi-call-outgoing:before {
+    content: "\e91b";
+  }
+  .svbi-call:before {
+    content: "\e91c";
+  }
+  .svbi-camera:before {
+    content: "\e91d";
+  }
+  .svbi-cancel:before {
+    content: "\e91e";
+  }
+  .svbi-car-01:before {
+    content: "\e91f";
+  }
+  .svbi-car-02:before {
+    content: "\e920";
+  }
+  .svbi-center-focus:before {
+    content: "\e921";
+  }
+  .svbi-checkmark-badge:before {
+    content: "\e922";
+  }
+  .svbi-checkmark-circle:before {
+    content: "\e923";
+  }
+  .svbi-checkmark-square-02:before {
+    content: "\e924";
+  }
+  .svbi-city:before {
+    content: "\e925";
+  }
+  .svbi-clock:before {
+    content: "\e926";
+  }
+  .svbi-coins-01-twotone-rounded .path1:before {
+    content: "\e927";
+    color: rgb(242, 201, 76);
+  }
+  .svbi-coins-01-twotone-rounded .path2:before {
+    content: "\e928";
+    margin-left: -1em;
+    color: rgb(242, 153, 74);
+  }
+  .svbi-content_copy:before {
+    content: "\e929";
+  }
+  .svbi-conversation:before {
+    content: "\e92a";
+  }
+  .svbi-credit-card-pos:before {
+    content: "\e92b";
+  }
+  .svbi-dashboard-square-1:before {
+    content: "\e92c";
+  }
+  .svbi-dashboard-square:before {
+    content: "\e92d";
+  }
+  .svbi-delete-1:before {
+    content: "\e92e";
+  }
+  .svbi-delete:before {
+    content: "\e92f";
+  }
+  .svbi-delivery-box:before {
+    content: "\e930";
+  }
+  .svbi-dice-outline:before {
+    content: "\e931";
+  }
+  .svbi-discount-tag:before {
+    content: "\e932";
+  }
+  .svbi-dish:before {
+    content: "\e933";
+  }
+  .svbi-document-attachment:before {
+    content: "\e934";
+  }
+  .svbi-door:before {
+    content: "\e935";
+  }
+  .svbi-download-01:before {
+    content: "\e936";
+  }
+  .svbi-drag-drop-vertical:before {
+    content: "\e937";
+  }
+  .svbi-earthquake:before {
+    content: "\e938";
+  }
+  .svbi-favourite:before {
+    content: "\e939";
+  }
+  .svbi-file-remove:before {
+    content: "\e93a";
+  }
+  .svbi-file-verified:before {
+    content: "\e93b";
+  }
+  .svbi-file-view:before {
+    content: "\e93c";
+  }
+  .svbi-file:before {
+    content: "\e93d";
+  }
+  .svbi-filters:before {
+    content: "\e93e";
+  }
+  .svbi-fire:before {
+    content: "\e93f";
+  }
+  .svbi-floor-plan:before {
+    content: "\e940";
+  }
+  .svbi-gift:before {
+    content: "\e941";
+  }
+  .svbi-handshake:before {
+    content: "\e942";
+  }
+  .svbi-hanger:before {
+    content: "\e943";
+  }
+  .svbi-help-circle:before {
+    content: "\e944";
+  }
+  .svbi-home:before {
+    content: "\e945";
+  }
+  .svbi-hourglass-solid-rounded:before {
+    content: "\e946";
+  }
+  .svbi-hourglass:before {
+    content: "\e947";
+  }
+  .svbi-icon-dwg:before {
+    content: "\e948";
+  }
+  .svbi-icon-pdf:before {
+    content: "\e949";
+  }
+  .svbi-iconLoading:before {
+    content: "\e94a";
+  }
+  .svbi-invoice:before {
+    content: "\e94b";
+  }
+  .svbi-job:before {
+    content: "\e94c";
+  }
+  .svbi-key:before {
+    content: "\e94d";
+  }
+  .svbi-lamp:before {
+    content: "\e94e";
+  }
+  .svbi-language-skill:before {
+    content: "\e94f";
+  }
+  .svbi-language-square:before {
+    content: "\e950";
+  }
+  .svbi-layout-2-row:before {
+    content: "\e951";
+  }
+  .svbi-layout-3-row:before {
+    content: "\e952";
+  }
+  .svbi-left-to-right-list-bullet:before {
+    content: "\e953";
+  }
+  .svbi-license-draft:before {
+    content: "\e954";
+  }
+  .svbi-location:before {
+    content: "\e955";
+  }
+  .svbi-log-in:before {
+    content: "\e956";
+  }
+  .svbi-log-out:before {
+    content: "\e957";
+  }
+  .svbi-logo--1:before {
+    content: "\e958";
+  }
+  .svbi-logo-QS-icon-outline:before {
+    content: "\e959";
+  }
+  .svbi-logo-QS-icon:before {
+    content: "\e95a";
+  }
+  .svbi-mail:before {
+    content: "\e95b";
+  }
+  .svbi-Manage_history:before {
+    content: "\e95c";
+  }
+  .svbi-medical:before {
+    content: "\e95d";
+  }
+  .svbi-menu-burger:before {
+    content: "\e95e";
+  }
+  .svbi-more-options:before {
+    content: "\e95f";
+  }
+  .svbi-navigation:before {
+    content: "\e960";
+  }
+  .svbi-Notification:before {
+    content: "\e961";
+  }
+  .svbi-paint-board:before {
+    content: "\e962";
+  }
+  .svbi-paint-brush:before {
+    content: "\e963";
+  }
+  .svbi-pencil-edit:before {
+    content: "\e964";
+  }
+  .svbi-pet:before {
+    content: "\e965";
+  }
+  .svbi-printer:before {
+    content: "\e966";
+  }
+  .svbi-qr-code:before {
+    content: "\e967";
+  }
+  .svbi-recycle:before {
+    content: "\e968";
+  }
+  .svbi-save-fill:before {
+    content: "\e969";
+  }
+  .svbi-save-outline:before {
+    content: "\e96a";
+  }
+  .svbi-school:before {
+    content: "\e96b";
+  }
+  .svbi-search-add:before {
+    content: "\e96c";
+  }
+  .svbi-Search:before {
+    content: "\e96d";
+  }
+  .svbi-sent:before {
+    content: "\e96e";
+  }
+  .svbi-setting-error:before {
+    content: "\e96f";
+  }
+  .svbi-settings:before {
+    content: "\e970";
+  }
+  .svbi-share-1:before {
+    content: "\e971";
+  }
+  .svbi-share:before {
+    content: "\e972";
+  }
+  .svbi-shopping_cart:before {
+    content: "\e973";
+  }
+  .svbi-sofa:before {
+    content: "\e974";
+  }
+  .svbi-sort:before {
+    content: "\e975";
+  }
+  .svbi-sport:before {
+    content: "\e976";
+  }
+  .svbi-square-lock:before {
+    content: "\e977";
+  }
+  .svbi-square-unlock:before {
+    content: "\e978";
+  }
+  .svbi-stairs:before {
+    content: "\e979";
+  }
+  .svbi-star:before {
+    content: "\e97a";
+  }
+  .svbi-tasks:before {
+    content: "\e97b";
+  }
+  .svbi-tick-double:before {
+    content: "\e97c";
+  }
+  .svbi-tick:before {
+    content: "\e97d";
+  }
+  .svbi-time:before {
+    content: "\e97e";
+  }
+  .svbi-train:before {
+    content: "\e97f";
+  }
+  .svbi-update:before {
+    content: "\e980";
+  }
+  .svbi-upload:before {
+    content: "\e981";
+  }
+  .svbi-user-1:before {
+    content: "\e982";
+  }
+  .svbi-user-add:before {
+    content: "\e983";
+  }
+  .svbi-user:before {
+    content: "\e984";
+  }
+  .svbi-view-off:before {
+    content: "\e985";
+  }
+  .svbi-view:before {
+    content: "\e986";
+  }
+  .svbi-wifi-disconnected:before {
+    content: "\e987";
+  }
+  

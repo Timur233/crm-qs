@@ -1,0 +1,53 @@
+@import "../svb-vars.scss";
+
+.leader-board {
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__body {
+        overflow: auto;
+
+        @include scrollStyling();
+    }
+}
+
+.leader-board-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;  
+
+    & tbody tr:hover {
+        background: rgba(144, 221, 255, 0.3);
+    }
+
+    & th {
+        font-weight: 600;
+    }
+
+    & td, & th {
+        border: 1px solid rgba(243, 244, 246, 1); 
+        padding: 12px 16px;
+        text-align: left;
+    }
+
+    & td {
+        cursor: pointer;
+    }
+  
+    & tr:first-child th {
+        border-top: none; 
+    }
+  
+    & tr:last-child td {
+        border-bottom: none; 
+    }
+    
+    & tr td:first-child, & tr th:first-child {
+        border-left: none; 
+    }
+    
+    & tr td:last-child, & tr th:last-child {
+        border-right: none; 
+    }
+}

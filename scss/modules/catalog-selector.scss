@@ -1,0 +1,66 @@
+@import "../svb-vars.scss";
+
+$active-item-color: #EAF6E9;
+
+.catalog-selector {
+    display: block;
+    padding-bottom: 8px;
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__body {
+        max-height: 150px;
+        overflow: auto;
+
+        @include scrollStyling();
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.catalog-selector-item {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: top;
+    gap: 4px;
+    padding: 4px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover, &--active {
+        background-color: $active-item-color;
+
+        & .catalog-selector-item__actions {
+            display: flex;
+        }
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        line-height: 1.6;
+    }
+
+    &__actions {
+        display: none;
+        flex: 0 0 auto;
+        gap: 2px;
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 16px;
+        padding: 2px 4px;
+        cursor: pointer;
+    }
+}

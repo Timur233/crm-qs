@@ -1,0 +1,22 @@
+@import "../svb-vars.scss";
+
+.svb-titlebar {
+    display: flex;
+    align-items: center;
+
+    &--size-l {
+        & .svb-titlebar__title {
+            font-size: $title-font-size--L;
+        }
+    }
+
+    &__title {
+        font-size: $title-font-size;
+        color: $text-color;
+        flex: 1 1 auto;
+    }
+
+    &__controll {
+        flex: 0 0 auto;
+    }
+}
